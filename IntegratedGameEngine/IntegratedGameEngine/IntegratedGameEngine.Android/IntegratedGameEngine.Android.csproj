@@ -46,11 +46,14 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
+        <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.0.1641" />
+        <PackageReference Include="MonoGame.Framework.Android" Version="3.8.0.1641" />
         <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
-        <PackageReference Include="Xamarin.AndroidX.MediaRouter" Version="1.2.0" />
-        <PackageReference Include="Xamarin.AndroidX.Palette" Version="1.0.0.5" />
+        <PackageReference Include="Xamarin.AndroidX.MediaRouter" Version="1.2.2.1" />
+        <PackageReference Include="Xamarin.AndroidX.Palette" Version="1.0.0.7" />
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="GameControlRenderer.cs" />
         <Compile Include="MainActivity.cs" />
         <Compile Include="Resources\Resource.Designer.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
@@ -67,6 +70,10 @@
         <AndroidResource Include="Resources\values\colors.xml" />
     </ItemGroup>
     <ItemGroup>
+        <ProjectReference Include="..\..\Game\Game.csproj">
+          <Project>{fbb7770e-abc1-4a13-ab54-91e791034962}</Project>
+          <Name>Game</Name>
+        </ProjectReference>
         <ProjectReference Include="..\IntegratedGameEngine\IntegratedGameEngine.csproj">
             <Project>{53885F19-277D-4958-BD57-0D53BC1DA9C6}</Project>
             <Name>IntegratedGameEngine</Name>
